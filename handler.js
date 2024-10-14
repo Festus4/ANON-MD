@@ -117,25 +117,25 @@ export async function handler(chatUpdate) {
       } else
         global.db.data.chats[m.chat] = {
           antiDelete: true,
-          antiLink: false,
-          antiSticker: false,
+          antiLink: true,
+          antiSticker: true,
           antiToxic: false,
-          detect: false,
+          detect: true,
           expired: 0,
           getmsg: true,
-          isBanned: false,
+          isBanned: true,
           nsfw: false,
           sBye: '',
           sDemote: '',
-          simi: false,
+          simi: true,
           sPromote: '',
-          sticker: false,
+          sticker: true,
           sWelcome: '',
           useDocument: false,
           viewOnce: false,
-          viewStory: false,
-          welcome: false,
-          chatbot: false,
+          viewStory: true,
+          welcome: true,
+          chatbot: true,
         }
 
       let settings = global.db.data.settings[this.user.jid]
@@ -149,8 +149,8 @@ export async function handler(chatUpdate) {
       } else
         global.db.data.settings[this.user.jid] = {
           self: false,
-          autoread: false,
-          restrict: false,
+          autoread: true,
+          restrict: true,
           restartDB: 0,
           status: 0,
         }
